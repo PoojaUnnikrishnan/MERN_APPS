@@ -5,8 +5,7 @@ import Cards from "./dbCards.js";
 //app config
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url =
-  "mongodb+srv://admin:qgUUacYwaML0kK0B@cluster0.olmika4.mongodb.net/?retryWrites=true&w=majority"; //url got from mongodb, connection url. hide it
+const connection_url = process.env.connection_url; //url got from mongodb, connection url. hide it
 
 //middleware
 app.use(express.json());
