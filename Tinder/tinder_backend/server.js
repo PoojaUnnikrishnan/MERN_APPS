@@ -14,7 +14,7 @@ app.use(cors());
 mongoose
   .connect(
     connection_url
-    //   useNewUrlParser: true, //these are some parameters to make connection smooth
+    //   useNewUrlParser: true, //these are some parameters to make connection smooth. Not required in latest version.
     //   useCreateIndex: true,
     //   useUnifiedTopology: true,
   )
