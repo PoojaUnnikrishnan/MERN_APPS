@@ -2,10 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import Cards from "./dbCards.js";
+import "dotenv/config"; //to read enviornment variables from .env file
 //app config
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url = process.env.connection_url; //url got from mongodb, connection url. hide it
+const CONNECTION_URL = process.env.CONNECTION_URL; //url got from mongodb, connection url. hide it
 
 //middleware
 app.use(express.json());
@@ -13,7 +14,7 @@ app.use(cors());
 //db config
 mongoose
   .connect(
-    connection_url
+    CONNECTION_URL
     //   useNewUrlParser: true, //these are some parameters to make connection smooth. Not required in latest version.
     //   useCreateIndex: true,
     //   useUnifiedTopology: true,
